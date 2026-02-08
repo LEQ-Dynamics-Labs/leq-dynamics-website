@@ -12,9 +12,8 @@
     depth = segments.length;
     // For GitHub Pages with a repo subfolder, try to detect base
     var prefix = '';
-    // Simple: if we have team/ pages, prefix is ../
-    // We detect based on the page path
-    if (path.indexOf('/team/') !== -1) {
+    // Detect subdirectory and set appropriate prefix
+    if (path.indexOf('/team/') !== -1 || path.indexOf('/news-articles/') !== -1) {
         prefix = '../';
     } else {
         prefix = '';

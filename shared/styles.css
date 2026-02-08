@@ -353,6 +353,12 @@ section { padding: 7rem 0; }
     margin-bottom: 3rem;
 }
 .footer-brand p { font-size: 0.875rem; color: #c8d2dc; margin-top: 1rem; max-width: 280px; }
+.footer-logo-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+}
 .footer-col h4 {
     font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.1em; color: var(--cloud); margin-bottom: 1.25rem;

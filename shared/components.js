@@ -69,6 +69,7 @@
             '<div class="container">' +
                 '<div class="footer-grid">' +
                     '<div class="footer-brand">' +
+                        '<img src="' + prefix + 'footer-logo.png" alt="LEQ Dynamics" class="footer-logo-img">' +
                         '<div class="logo">LEQ<span style="color:var(--blue);">.</span>Dynamics</div>' +
                         '<p>Building AI systems where cooperation compounds. Engineered for trust, operated with transparency.</p>' +
                     '</div>' +

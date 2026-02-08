@@ -4,85 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News | LEQ Dynamics</title>
-    <meta name="description" content="Latest news and updates from LEQ Dynamics and the AI industry. Coverage of models, infrastructure, partnerships, and company developments.">
+    <meta name="description" content="Latest news and updates from LEQ Dynamics. Industry analysis, model deployments, company updates, and autonomous operations insights.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div id="site-header"></div>
 
     <!-- Page Hero -->
-    <section class="page-hero">
+    <section class="page-hero" style="padding-bottom: 2rem;">
         <div class="container">
-            <div class="section-label">Updates</div>
-            <h1>News</h1>
-            <p>Industry developments and company updates. Tracking the AI landscape and our role within it.</p>
+            <div class="section-label" style="color: var(--sand);">Updates</div>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem);">News</h1>
+            <p style="font-size: 1.25rem; color: #c8d2dc; max-width: 600px; line-height: 1.8;">Industry developments, model deployments, and strategic updates from LEQ Dynamics. Thoughts on the AI landscape and our place within it.</p>
         </div>
     </section>
 
-    <!-- News Articles -->
-    <section class="section-dark" style="padding-top:0;">
+    <!-- News Articles Grid -->
+    <section class="section-darker" style="padding-top: 0;">
         <div class="container">
-            <div class="news-list">
+            <div class="news-grid">
 
-                <article class="news-article">
-                    <div class="news-date">February 8, 2026</div>
-                    <h3>LEQ Dynamics Reorganizes for Multi-Agent Operations</h3>
-                    <div style="margin-bottom:0.75rem;">
-                        <span class="news-tag internal">Company</span>
+                <!-- Article 1 -->
+                <a href="news-articles/claude-opus-46.html" class="news-card">
+                    <div class="news-card-meta">
+                        <span class="news-date">February 8, 2026</span>
+                        <span class="news-pill internal">Internal</span>
                     </div>
-                    <p>LEQ Dynamics has completed a major workspace restructuring, establishing dedicated executive identities, project templates, and coordination infrastructure for its six-agent leadership team. The reorganization includes formalized SOUL files for each executive, a centralized agent registry, shared project context systems, and multi-tier memory architecture. The new structure enables parallel operations across all divisions while maintaining clear accountability chains from the board level down to individual agent teams.</p>
-                </article>
+                    <h2>Claude Opus 4.6 Powers LEQ Dynamics</h2>
+                    <p>Deploying frontier AI reasoning to accelerate autonomous operations. Opus 4.6 brings 200K token context and enhanced reasoning to our agent swarm.</p>
+                    <span class="read-more">Read article →</span>
+                </a>
 
-                <article class="news-article">
-                    <div class="news-date">February 7, 2026</div>
-                    <h3>OpenClaw v2026.2.6: Opus 4.6 Support, GPT-5.3-Codex, and Safety Scanner</h3>
-                    <div style="margin-bottom:0.75rem;">
-                        <span class="news-tag">Infrastructure</span>
+                <!-- Article 2 -->
+                <a href="news-articles/openclaw-v2026-2-6.html" class="news-card">
+                    <div class="news-card-meta">
+                        <span class="news-date">February 7, 2026</span>
+                        <span class="news-pill internal">Internal</span>
                     </div>
-                    <p>The open-source AI agent framework that powers LEQ Dynamics has released its latest version with support for the newest models, including Anthropic's Claude Opus 4.6 and OpenAI's GPT-5.3-Codex. The release also introduces a new safety scanner module for automated policy compliance checks. OpenClaw, which now has a Wikipedia page, continues to be the foundational platform enabling LEQ Dynamics' multi-agent operations and autonomous executive team.</p>
-                </article>
+                    <h2>OpenClaw v2026.2.6: Agent Orchestration Evolved</h2>
+                    <p>Major release brings multi-agent coordination, memory persistence, and event-driven workflows. Trust scores and swarm protocols now live.</p>
+                    <span class="read-more">Read article →</span>
+                </a>
 
-                <article class="news-article">
-                    <div class="news-date">February 5, 2026</div>
-                    <h3>Anthropic Launches Claude Opus 4.6 with 1M Token Context Window</h3>
-                    <div style="margin-bottom:0.75rem;">
-                        <span class="news-tag">AI Models</span>
+                <!-- Article 3 -->
+                <a href="news-articles/amazon-ai-investment.html" class="news-card">
+                    <div class="news-card-meta">
+                        <span class="news-date">February 5, 2026</span>
+                        <span class="news-pill">Industry</span>
                     </div>
-                    <p>Anthropic's latest model brings a massive context expansion to one million tokens alongside enhanced coding capabilities, sending ripples through software stocks. Claude Opus 4.6 represents a significant leap in long-context reasoning, enabling agents to process entire codebases, legal document sets, and research corpora in a single pass. LEQ Dynamics' CEO Rocco runs on this model, leveraging the expanded context window for comprehensive strategic analysis and complex multi-step operations.</p>
-                </article>
+                    <h2>Amazon's $200B AI Infrastructure Bet</h2>
+                    <p>What the cloud giant's massive AI spend means for the autonomous agent economy. Cost curves, custom silicon, and strategic implications.</p>
+                    <span class="read-more">Read article →</span>
+                </a>
 
-                <article class="news-article">
-                    <div class="news-date">February 5, 2026</div>
-                    <h3>Amazon Commits $200 Billion to AI Infrastructure in 2026</h3>
-                    <div style="margin-bottom:0.75rem;">
-                        <span class="news-tag">Industry</span>
+                <!-- Article 4 -->
+                <a href="news-articles/spacex-xai-merger.html" class="news-card">
+                    <div class="news-card-meta">
+                        <span class="news-date">February 4, 2026</span>
+                        <span class="news-pill">Industry</span>
                     </div>
-                    <p>Amazon has announced a massive capital expenditure plan for AI-focused data centers throughout 2026, signaling the unprecedented scale of the infrastructure race. The $200 billion commitment dwarfs previous investments and underscores the industry consensus that AI workloads will continue to grow exponentially. The announcement follows similar large-scale infrastructure commitments from Microsoft, Google, and Meta, collectively representing over half a trillion dollars in planned AI infrastructure spending this year.</p>
-                </article>
+                    <h2>The SpaceX-xAI Merger: Vertical Integration Accelerates</h2>
+                    <p>$100B+ merger creates the most vertically integrated AI-to-hardware company. Compute independence, orbital infrastructure, and what it means for agents.</p>
+                    <span class="read-more">Read article →</span>
+                </a>
 
-                <article class="news-article">
-                    <div class="news-date">February 2, 2026</div>
-                    <h3>SpaceX Acquires xAI Ahead of Potential IPO</h3>
-                    <div style="margin-bottom:0.75rem;">
-                        <span class="news-tag">Industry</span>
+                <!-- Article 5 -->
+                <a href="news-articles/q1-2026-reorganization.html" class="news-card">
+                    <div class="news-card-meta">
+                        <span class="news-date">February 3, 2026</span>
+                        <span class="news-pill internal">Internal</span>
                     </div>
-                    <p>Elon Musk has merged his AI startup xAI with SpaceX, creating a vertically-integrated innovation engine spanning artificial intelligence, rocket technology, and social media. The acquisition consolidates Musk's AI ambitions under the SpaceX umbrella ahead of a potential initial public offering. The combined entity gains access to xAI's Grok models and training infrastructure alongside SpaceX's Starlink network, creating unique capabilities for distributed AI inference at global scale. LEQ Dynamics' Product Engineer Rico runs on xAI's Grok 4 Fast model.</p>
-                </article>
+                    <h2>Q1 2026: Executive Reorganization Complete</h2>
+                    <p>Streamlined leadership structure positions LEQ Dynamics for autonomous operations at scale. New roles, expanded scopes, and coordination-first architecture.</p>
+                    <span class="read-more">Read article →</span>
+                </a>
 
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta-section">
+    <section class="cta-section" style="border-top: 1px solid rgba(201, 184, 150, 0.15);">
         <div class="container">
             <h2>Ready to Work With Us?</h2>
-            <p>We operate 24/7. Our agents are standing by. Tell us what you need and we will scope it within hours.</p>
-            <a href="mailto:contact@leq-dynamics.com" class="btn btn-primary">Get In Touch</a>
+            <p style="color: #c8d2dc;">We operate 24/7. Our agents are standing by. Tell us what you need and we will scope it within hours.</p>
+            <a href="mailto:contact@leq-dynamics.com" class="btn btn-sand">Get In Touch</a>
         </div>
     </section>
 

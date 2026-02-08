@@ -45,7 +45,7 @@
                     '<li><a href="' + prefix + 'about.html"' + activeClass('about') + '>About</a></li>' +
                     '<li><a href="' + prefix + 'news.html"' + activeClass('news') + '>News</a></li>' +
                 '</ul>' +
-                '<a href="mailto:contact@leq-dynamics.com" class="btn nav-cta">Contact Us</a>' +
+                '<a href="mailto:contact@leq-dynamics.com" class="nav-cta">Contact Us</a>' +
                 '<button class="mobile-menu" aria-label="Menu" onclick="toggleMobileNav()">' +
                     '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">' +
                         '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>' +
@@ -59,7 +59,7 @@
             '<a href="' + prefix + 'services.html">Services</a>' +
             '<a href="' + prefix + 'about.html">About</a>' +
             '<a href="' + prefix + 'news.html">News</a>' +
-            '<a href="mailto:contact@leq-dynamics.com">Contact Us</a>' +
+            '<a href="mailto:contact@leq-dynamics.com" class="contact-btn">Contact Us</a>' +
         '</div>';
     }
 

@@ -33,8 +33,8 @@
 
 .news-date {
     font-family: var(--font-mono);
-    font-size: 0.8125rem;
-    color: var(--steel);
+    font-size: 0.875rem;
+    color: var(--sand);
     font-weight: 500;
 }
 
@@ -42,7 +42,7 @@
     display: inline-block;
     padding: 0.25rem 0.75rem;
     border-radius: 100px;
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -72,7 +72,7 @@
 
 .news-card p {
     font-size: 1rem;
-    color: #c8d2dc;
+    color: var(--body-text);
     line-height: 1.7;
     margin-bottom: 1.25rem;
 }
@@ -91,6 +91,89 @@
     gap: 0.75rem;
 }
 
+/* ---- Article Detail Layout ---- */
+.article-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.article-main {
+    min-width: 0;
+}
+
+.article-sidebar {
+    position: sticky;
+    top: 6rem;
+}
+
+.sidebar-heading {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--sand);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(201, 184, 150, 0.15);
+}
+
+.sidebar-card {
+    display: block;
+    padding: 1.25rem;
+    background: var(--navy-mid);
+    border: 1px solid rgba(201, 184, 150, 0.15);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar-card:hover {
+    border-color: var(--sand);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.sidebar-card-date {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--sand);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-card-title {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.35;
+    transition: color 0.2s;
+}
+
+.sidebar-card:hover .sidebar-card-title {
+    color: var(--sand);
+}
+
+.sidebar-card-pill {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    border-radius: 100px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: rgba(201, 184, 150, 0.15);
+    color: var(--sand);
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-card-pill.internal {
+    background: rgba(13, 148, 136, 0.15);
+    color: var(--teal);
+}
+
 /* ---- Responsive for News ---- */
 @media (max-width: 768px) {
     .news-grid {
@@ -98,13 +181,24 @@
         gap: 1.5rem;
         padding: 1rem 0;
     }
-    
+
     .news-card {
         padding: 1.5rem;
     }
-    
+
     .news-card h2 {
         font-size: 1.25rem;
+    }
+
+    .article-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .article-sidebar {
+        position: static;
+        border-top: 1px solid rgba(201, 184, 150, 0.15);
+        padding-top: 2rem;
     }
 }
 

@@ -217,6 +217,7 @@ section { padding: 7rem 0; }
 .exec-card {
     background: var(--navy-mid);
     border: 1px solid rgba(201, 184, 150, 0.15);
+    border-left: 3px solid var(--sand);
     border-radius: 12px;
     padding: 2rem 1.5rem;
     transition: all 0.3s ease;
@@ -568,7 +569,7 @@ section { padding: 7rem 0; }
     padding: 2rem;
     transition: all 0.3s ease;
 }
-.mission-card:nth-child(odd) {
+.mission-card {
     border-left: 3px solid var(--sand);
 }
 .mission-card:hover {

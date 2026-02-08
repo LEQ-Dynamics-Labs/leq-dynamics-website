@@ -1,18 +1,21 @@
 # Cloudflare Pages URL Rewrites
 # Clean URLs without .html extension
 
-/index.html           /               200!
-/team.html            /team           200!
-/services.html        /services       200!
-/about.html           /about          200!
-/news.html            /news           200!
+# Top-level pages: serve .html for clean URLs
+/team                 /team.html            200!
+/services             /services.html        200!
+/about                /about.html           200!
+/news                 /news.html            200!
 
-# Legacy redirects
-/index.html           /               301
-/team.html            /team           301
-/services.html        /services       301
-/about.html           /about          301
-/news.html            /news           301
+# News article clean URLs
+/news-articles/*      /news-articles/:splat.html    200!
 
-# News articles
-/news-articles/*.html    /news/:splat    200
+# Team member clean URLs
+/team/*               /team/:splat.html     200!
+
+# Legacy .html redirects (301 to clean URL)
+/index.html           /                     301
+/team.html            /team                 301
+/services.html        /services             301
+/about.html           /about                301
+/news.html            /news                 301

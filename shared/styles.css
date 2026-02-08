@@ -275,6 +275,17 @@ section { padding: 7rem 0; }
     font-size: 1rem; color: #c8d2dc;
     max-width: 520px; margin: 1.5rem auto 0;
 }
+.equation-credit {
+    font-size: 0.875rem; color: var(--sand);
+    max-width: 520px; margin: 1rem auto 0;
+}
+.equation-credit a {
+    color: var(--sand);
+    text-decoration: underline;
+}
+.equation-credit a:hover {
+    color: var(--white);
+}
 
 /* ---- Values ---- */
 .values-grid {

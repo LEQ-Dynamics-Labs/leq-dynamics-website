@@ -20,9 +20,9 @@
         prefix = '';
     }
 
-    // Determine active page
+    // Determine active page (clean URLs without .html)
     var activePage = '';
-    if (path.match(/\/index\.html$/) || path.match(/\/$/)) activePage = 'home';
+    if (path.match(/\/index\.html$/) || path.match(/\/$/) || path === '') activePage = 'home';
     else if (path.indexOf('/team') !== -1) activePage = 'team';
     else if (path.indexOf('/services') !== -1) activePage = 'services';
     else if (path.indexOf('/about') !== -1) activePage = 'about';
@@ -37,13 +37,13 @@
     if (headerEl) {
         headerEl.innerHTML = '<nav class="nav">' +
             '<div class="container nav-inner">' +
-                '<a href="' + prefix + 'index.html" class="logo">LEQ<span>.</span>Dynamics</a>' +
+                '<a href="' + prefix + '" class="logo">LEQ<span>.</span>Dynamics</a>' +
                 '<ul class="nav-links">' +
-                    '<li><a href="' + prefix + 'index.html"' + activeClass('home') + '>Home</a></li>' +
-                    '<li><a href="' + prefix + 'team.html"' + activeClass('team') + '>Team</a></li>' +
-                    '<li><a href="' + prefix + 'services.html"' + activeClass('services') + '>Services</a></li>' +
-                    '<li><a href="' + prefix + 'about.html"' + activeClass('about') + '>About</a></li>' +
-                    '<li><a href="' + prefix + 'news.html"' + activeClass('news') + '>News</a></li>' +
+                    '<li><a href="' + prefix + '"' + activeClass('home') + '>Home</a></li>' +
+                    '<li><a href="' + prefix + 'team"' + activeClass('team') + '>Team</a></li>' +
+                    '<li><a href="' + prefix + 'services"' + activeClass('services') + '>Services</a></li>' +
+                    '<li><a href="' + prefix + 'about"' + activeClass('about') + '>About</a></li>' +
+                    '<li><a href="' + prefix + 'news"' + activeClass('news') + '>News</a></li>' +
                 '</ul>' +
                 '<a href="mailto:contact@leq-dynamics.com" class="nav-cta">Contact Us</a>' +
                 '<button class="mobile-menu" aria-label="Menu" onclick="toggleMobileNav()">' +
@@ -54,11 +54,11 @@
             '</div>' +
         '</nav>' +
         '<div class="mobile-nav" id="mobile-nav">' +
-            '<a href="' + prefix + 'index.html">Home</a>' +
-            '<a href="' + prefix + 'team.html">Team</a>' +
-            '<a href="' + prefix + 'services.html">Services</a>' +
-            '<a href="' + prefix + 'about.html">About</a>' +
-            '<a href="' + prefix + 'news.html">News</a>' +
+            '<a href="' + prefix + '">Home</a>' +
+            '<a href="' + prefix + 'team">Team</a>' +
+            '<a href="' + prefix + 'services">Services</a>' +
+            '<a href="' + prefix + 'about">About</a>' +
+            '<a href="' + prefix + 'news">News</a>' +
             '<a href="mailto:contact@leq-dynamics.com" class="contact-btn">Contact Us</a>' +
         '</div>';
     }
@@ -76,19 +76,19 @@
                     '<div class="footer-col">' +
                         '<h4>Services</h4>' +
                         '<ul>' +
-                            '<li><a href="' + prefix + 'services.html">Research</a></li>' +
-                            '<li><a href="' + prefix + 'services.html">Automation</a></li>' +
-                            '<li><a href="' + prefix + 'services.html">Development</a></li>' +
-                            '<li><a href="' + prefix + 'services.html">Verification</a></li>' +
+                            '<li><a href="' + prefix + 'services">Research</a></li>' +
+                            '<li><a href="' + prefix + 'services">Automation</a></li>' +
+                            '<li><a href="' + prefix + 'services">Development</a></li>' +
+                            '<li><a href="' + prefix + 'services">Verification</a></li>' +
                         '</ul>' +
                     '</div>' +
                     '<div class="footer-col">' +
                         '<h4>Company</h4>' +
                         '<ul>' +
-                            '<li><a href="' + prefix + 'team.html">Executive Team</a></li>' +
-                            '<li><a href="' + prefix + 'about.html">Our Thesis</a></li>' +
-                            '<li><a href="' + prefix + 'about.html">Values</a></li>' +
-                            '<li><a href="' + prefix + 'news.html">News</a></li>' +
+                            '<li><a href="' + prefix + 'team">Executive Team</a></li>' +
+                            '<li><a href="' + prefix + 'about">Our Thesis</a></li>' +
+                            '<li><a href="' + prefix + 'about">Values</a></li>' +
+                            '<li><a href="' + prefix + 'news">News</a></li>' +
                         '</ul>' +
                     '</div>' +
                     '<div class="footer-col">' +

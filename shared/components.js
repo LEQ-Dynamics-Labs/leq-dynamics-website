@@ -16,7 +16,7 @@
     if (path.indexOf('/team/') !== -1 || path.indexOf('/news-articles/') !== -1) {
         prefix = '../';
     } else {
-        prefix = '';
+        prefix = './';
     }
 
     // Determine active page (clean URLs without .html)
@@ -53,11 +53,11 @@
             '</div>' +
         '</nav>' +
         '<div class="mobile-nav" id="mobile-nav">' +
-            '<a href="' + prefix + '">Home</a>' +
-            '<a href="' + prefix + 'team">Team</a>' +
-            '<a href="' + prefix + 'services">Services</a>' +
-            '<a href="' + prefix + 'about">About</a>' +
-            '<a href="' + prefix + 'news">News</a>' +
+            '<a href="' + prefix + '"' + activeClass('home') + '>Home</a>' +
+            '<a href="' + prefix + 'team"' + activeClass('team') + '>Team</a>' +
+            '<a href="' + prefix + 'services"' + activeClass('services') + '>Services</a>' +
+            '<a href="' + prefix + 'about"' + activeClass('about') + '>About</a>' +
+            '<a href="' + prefix + 'news"' + activeClass('news') + '>News</a>' +
             '<a href="mailto:contact@leq-dynamics.com" class="contact-btn">Contact Us</a>' +
         '</div>';
     }

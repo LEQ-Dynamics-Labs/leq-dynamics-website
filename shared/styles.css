@@ -66,9 +66,20 @@ a:hover { color: var(--blue-deep); }
 .logo { font-size: 1.375rem; font-weight: 800; color: var(--white); letter-spacing: -0.03em; }
 .logo span { color: var(--blue); }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-.nav-links a { color: var(--silver); font-weight: 500; font-size: 0.9375rem; transition: color 0.2s; }
-.nav-links a:hover { color: var(--white); }
-.nav-links a.active { color: var(--white); }
+.nav-links a {
+    color: var(--silver); font-weight: 500; font-size: 0.9375rem;
+    transition: color 0.2s, border-color 0.2s;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+}
+.nav-links a:hover {
+    color: var(--white);
+    border-bottom-color: rgba(201, 184, 150, 0.5);
+}
+.nav-links a.active {
+    color: var(--sand);
+    border-bottom-color: var(--sand);
+}
 .nav-cta {
     padding: 0.625rem 1.5rem; font-size: 0.875rem; font-weight: 600;
     background: var(--blue); color: var(--white); border: none; border-radius: 6px;
@@ -93,6 +104,11 @@ a:hover { color: var(--blue-deep); }
     padding: 0.75rem 0;
 }
 .mobile-nav a:hover { color: var(--white); }
+.mobile-nav a.active {
+    color: var(--sand);
+    border-left: 3px solid var(--sand);
+    padding-left: 1rem;
+}
 .mobile-nav .contact-btn {
     display: none;
     margin-top: 1rem;
@@ -291,6 +307,23 @@ section { padding: 7rem 0; }
 .equation-caption {
     font-size: 1rem; color: var(--body-text);
     max-width: 520px; margin: 1.5rem auto 0;
+}
+.equation-caption-accent {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    padding-left: 1.25rem;
+}
+.equation-caption-accent::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: var(--sand);
+    border-radius: 2px;
 }
 .equation-credit {
     font-size: 0.875rem; color: var(--sand);

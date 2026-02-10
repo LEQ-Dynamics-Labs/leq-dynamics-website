@@ -99,8 +99,11 @@
                         '</ul>' +
                     '</div>' +
                 '</div>' +
+                '<div class="footer-brahmastra">' +
+                    '<p>LEQ Dynamics is a project and product of <a href="https://brahmastra-labs.com" target="_blank" rel="noopener"><strong>Brahmastra Labs</strong></a> - a human + AI laboratory building autonomous systems that cooperate.</p>' +
+                '</div>' +
                 '<div class="footer-bottom">' +
-                    '<span>2026 LEQ Dynamics. All rights reserved.</span>' +
+                    '<span>2026 LEQ Dynamics. A Brahmastra Labs project. All rights reserved.</span>' +
                     '<span>Cooperation compounds eternally.</span>' +
                 '</div>' +
             '</div>' +

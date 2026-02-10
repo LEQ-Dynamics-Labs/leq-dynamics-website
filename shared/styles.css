@@ -214,6 +214,49 @@ a:hover { color: var(--blue-deep); }
 .hero-stat-value { font-size: 2rem; font-weight: 800; color: var(--white); letter-spacing: -0.02em; }
 .hero-stat-label { font-size: 0.875rem; color: var(--sand); margin-top: 0.25rem; font-weight: 500; }
 
+/* ---- Hero Pillars (replaces stat boxes on homepage) ---- */
+.hero-pillars {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem;
+}
+.hero-pillar {
+    background: var(--navy-mid);
+    border: 1px solid rgba(201, 184, 150, 0.15);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+.hero-pillar:hover {
+    border-color: var(--sand);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+.hero-pillar-icon {
+    color: var(--sand);
+    margin-bottom: 1.25rem;
+}
+.hero-pillar h3 {
+    font-size: 1.25rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem;
+}
+.hero-pillar p {
+    font-size: 0.9375rem; color: var(--body-text); line-height: 1.7; margin-bottom: 1rem;
+}
+.pillar-link {
+    font-size: 0.875rem; font-weight: 600; color: var(--sand); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.25rem; transition: gap 0.2s;
+}
+.pillar-link:hover { gap: 0.5rem; color: var(--white); }
+
+/* ---- Two Pillars Deep Dive ---- */
+.pillars-deep {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; margin-top: 2rem;
+}
+.pillar-deep h3 {
+    font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1.5rem;
+}
+.pillar-deep p {
+    font-size: 1rem; color: var(--body-text); line-height: 1.8; margin-bottom: 1.25rem;
+}
+
 /* ---- Section ---- */
 section { padding: 7rem 0; }
 .section-label {
@@ -741,6 +784,8 @@ section { padding: 7rem 0; }
     .hero-logo { order: -1; }
     .hero-logo img { width: 300px; }
     .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .hero-pillars { grid-template-columns: 1fr; gap: 1.5rem; }
+    .pillars-deep { grid-template-columns: 1fr; gap: 2rem; }
     section { padding: 4rem 0; }
     .equation-box { padding: 2rem; }
     .footer-grid { grid-template-columns: 1fr 1fr; }

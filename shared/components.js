@@ -24,6 +24,7 @@
     if (path.match(/\/index\.html$/) || path.match(/\/$/) || path === '') activePage = 'home';
     else if (path.indexOf('/team') !== -1) activePage = 'team';
     else if (path.indexOf('/services') !== -1) activePage = 'services';
+    else if (path.indexOf('/principles') !== -1) activePage = 'principles';
     else if (path.indexOf('/about') !== -1) activePage = 'about';
     else if (path.indexOf('/news') !== -1) activePage = 'news';
 
@@ -41,6 +42,7 @@
                     '<li><a href="' + prefix + '"' + activeClass('home') + '>Home</a></li>' +
                     '<li><a href="' + prefix + 'team"' + activeClass('team') + '>Team</a></li>' +
                     '<li><a href="' + prefix + 'services"' + activeClass('services') + '>Services</a></li>' +
+                    '<li><a href="' + prefix + 'principles"' + activeClass('principles') + '>Principles</a></li>' +
                     '<li><a href="' + prefix + 'about"' + activeClass('about') + '>About</a></li>' +
                     '<li><a href="' + prefix + 'news"' + activeClass('news') + '>News</a></li>' +
                 '</ul>' +
@@ -56,6 +58,7 @@
             '<a href="' + prefix + '"' + activeClass('home') + '>Home</a>' +
             '<a href="' + prefix + 'team"' + activeClass('team') + '>Team</a>' +
             '<a href="' + prefix + 'services"' + activeClass('services') + '>Services</a>' +
+            '<a href="' + prefix + 'principles"' + activeClass('principles') + '>Principles</a>' +
             '<a href="' + prefix + 'about"' + activeClass('about') + '>About</a>' +
             '<a href="' + prefix + 'news"' + activeClass('news') + '>News</a>' +
             '<a href="mailto:contact@leq-dynamics.com" class="contact-btn">Contact Us</a>' +

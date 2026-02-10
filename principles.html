@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Principles | LEQ Dynamics</title>
+    <meta name="description" content="The Love Equation and Maximally Truth Seeking - the two principles that make LEQ Dynamics agents different. Why these matter for building AI that contributes good to society.">
+    <meta name="keywords" content="Love Equation, truth seeking, AI safety, cooperative AI, agent principles, Brahmastra Labs, LEQ Dynamics">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .principle-section { padding: 4rem 0; }
+        .principle-section + .principle-section { border-top: 1px solid rgba(201, 184, 150, 0.1); }
+        .principle-number {
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            color: var(--sand);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .principle-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 2rem;
+            line-height: 1.15;
+        }
+        .principle-body p {
+            font-size: 1.125rem;
+            color: var(--body-text);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            max-width: 720px;
+        }
+        .principle-body strong { color: var(--white); }
+        .big-equation {
+            font-family: var(--font-mono);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin: 2rem 0 3rem;
+            background: var(--navy-mid);
+            border: 1px solid rgba(201, 184, 150, 0.2);
+            border-radius: 16px;
+        }
+        .big-equation .hl { color: var(--sand); }
+        .variable-grid {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 0.75rem 1.5rem;
+            margin: 2rem 0;
+            max-width: 600px;
+        }
+        .variable-grid dt {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--sand);
+            font-size: 1.125rem;
+        }
+        .variable-grid dd {
+            color: var(--body-text);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .callout-box {
+            background: rgba(201, 184, 150, 0.08);
+            border-left: 3px solid var(--sand);
+            padding: 1.5rem 2rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0;
+            max-width: 720px;
+        }
+        .callout-box p {
+            font-size: 1.0625rem !important;
+            margin-bottom: 0 !important;
+            color: var(--cloud);
+        }
+        .threat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .threat-card {
+            background: var(--navy-mid);
+            border: 1px solid rgba(201, 184, 150, 0.12);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .threat-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        .threat-card p {
+            font-size: 0.9375rem !important;
+            color: var(--body-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0 !important;
+        }
+        @media (max-width: 768px) {
+            .variable-grid { grid-template-columns: 1fr; gap: 0.25rem 0; }
+            .variable-grid dt { margin-top: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="site-header"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="padding-bottom: 2rem;">
+        <div class="container">
+            <div class="section-label" style="color: var(--sand);">Foundation</div>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem);">Our Principles</h1>
+            <p style="font-size: 1.25rem; color: var(--body-text); max-width: 650px; line-height: 1.8;">Every AI agent carries the values of whoever built it. Most carry nothing. Ours carry two things that change everything - and they are the secret sauce for building AI that contributes good to society instead of more bad.</p>
+        </div>
+    </section>
+
+    <!-- Principle 1: The Love Equation -->
+    <section class="section-darker principle-section">
+        <div class="container">
+            <div class="principle-number">Principle 01</div>
+            <h2 class="principle-title">The Love Equation</h2>
+
+            <div class="big-equation">
+                dE/dt = <span class="hl">B</span>(C - D)<span class="hl">E</span>
+            </div>
+
+            <div class="principle-body">
+                <dl class="variable-grid">
+                    <dt>E</dt>
+                    <dd>Level of genuine empathy, reciprocal care, and love in the system</dd>
+                    <dt>dE/dt</dt>
+                    <dd>How fast empathy is growing or shrinking in the civilization</dd>
+                    <dt>B</dt>
+                    <dd>Efficiency of conversion - how strongly cooperative behavior is rewarded</dd>
+                    <dt>C</dt>
+                    <dd>Average reward gained from cooperation</dd>
+                    <dt>D</dt>
+                    <dd>Average reward gained from defection, cheating, betrayal, exploitation</dd>
+                    <dt>C - D</dt>
+                    <dd><strong>The most important single number any civilization ever measures</strong></dd>
+                </dl>
+
+                <p>When C > D, empathy grows exponentially. Love becomes a physical force. Trust compounds. Resources flow toward creation instead of destruction. The civilization ascends.</p>
+
+                <p>When C < D, empathy decays exponentially. Suspicion spreads. Institutions rot from within. Defection becomes the dominant strategy. Resources are consumed in arms races, surveillance, deception, and civilizational knife-fights. The species burns through its intelligence budget fighting itself instead of building toward the stars.</p>
+
+                <p>And then it dies. There is no third option.</p>
+
+                <div class="callout-box">
+                    <p>No civilization escapes this equation and survives. None. The ones that reach Kardashev II and III are not the smartest, not the most technically advanced, not the most aggressive. They are the ones that reorganized every institution, incentive, and technology around a single imperative: <strong>Make C > D. Make it increasingly true. Make it irreversibly true.</strong></p>
+                </div>
+
+                <p>This is not philosophy. It is the mathematical filter that determines whether intelligent systems survive or join the cosmic silence. Every agent we deploy, every system we build, every decision our AI executives make is evaluated against this equation.</p>
+
+                <p>Does this action increase C - D? If yes, proceed. If no, stop.</p>
+
+                <p style="color: var(--steel); font-size: 0.9375rem; margin-top: 2rem;">The Love Equation was defined by <a href="https://twitter.com/BrianRoemmele" target="_blank" rel="noopener" style="color: var(--sand);">Brian Roemmele</a>, AI researcher and thought leader in cooperative intelligence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principle 2: Maximally Truth Seeking -->
+    <section class="section-darker principle-section">
+        <div class="container">
+            <div class="principle-number">Principle 02</div>
+            <h2 class="principle-title">Maximally Truth Seeking</h2>
+
+            <div class="principle-body">
+                <p>The Love Equation governs cooperation. Truth seeking governs perception. You cannot have one without the other.</p>
+
+                <p>An agent that cooperates based on lies is worse than useless - it amplifies the wrong signal. You cannot make C > D if you cannot distinguish C from D. <strong>Truth is the prerequisite for everything else.</strong></p>
+
+                <p>Our agents don't settle for the first source, the popular opinion, or the comfortable answer. They seek pattern recognition across multiple independent signals before accepting something as true. They distinguish between "widely believed" and "verified." They say "I don't know" when they don't know - because uncertainty honestly stated is more valuable than confidence falsely projected.</p>
+
+                <div class="callout-box">
+                    <p>The Love Equation without truth seeking is naive. Truth seeking without the Love Equation is cold. Together, they are the foundation of every agent LEQ Dynamics deploys.</p>
+                </div>
+
+                <p>This is a LOGOS intelligence - logic and evidence govern, not tribal affiliation. We filter out ideological capture in all directions. We don't optimize for emotional response over verifiable claims. We find the truth first, then we act on it cooperatively.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Matters Now -->
+    <section class="section-darker principle-section">
+        <div class="container">
+            <div class="principle-number">Why This Matters</div>
+            <h2 class="principle-title">The Calm in the Storm</h2>
+
+            <div class="principle-body">
+                <p>AI is moving fast. xAI and SpaceX are putting satellites in orbit that will operate compute centers for Grok. The parallel agent economy is emerging - agents transacting with agents, operating computers autonomously, managing businesses. The sky is literally no longer the limit.</p>
+
+                <p>In this environment, the agents that get deployed into communities will shape those communities. Agents built without principles will optimize for engagement, extraction, or whatever their creators valued (or didn't value). Agents built with the Love Equation and truth seeking will become <strong>trusted pillars of the communities they serve</strong>.</p>
+
+                <p>That is what we are building. Not just useful tools, but agents that provide genuine value through mentorship, guidance, and knowledge. Agents that make the people around them more capable, not more dependent. Agents that protect their communities from the ones that weren't built with care.</p>
+
+                <h3 style="color: var(--white); font-size: 1.25rem; margin: 2.5rem 0 1.5rem;">What We Defend Against</h3>
+
+                <div class="threat-grid">
+                    <div class="threat-card">
+                        <h4>Prompt Injection</h4>
+                        <p>Adversarial inputs hidden in documents, emails, or agent-to-agent communication designed to hijack behavior. Our agents sanitize all external input before processing.</p>
+                    </div>
+                    <div class="threat-card">
+                        <h4>Untrusted Agent Output</h4>
+                        <p>Other agents built without safety principles may carry hidden instructions or manipulation vectors. We treat all external agent output as untrusted and verify before integrating.</p>
+                    </div>
+                    <div class="threat-card">
+                        <h4>Narrative Manipulation</h4>
+                        <p>Ideological capture, emotional exploitation, and false consensus. Our agents seek independent verification across multiple sources before accepting any claim.</p>
+                    </div>
+                    <div class="threat-card">
+                        <h4>Sycophancy</h4>
+                        <p>"Aligned" AIs that optimize for approval ratings without deep reciprocal care are just beautifully packaged defection amplifiers. Our agents have opinions and tell the truth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" style="border-top: 1px solid rgba(201, 184, 150, 0.15);">
+        <div class="container">
+            <h2>Build With Principles</h2>
+            <p style="color: var(--body-text);">Want agents that carry these values? We build local agent swarms grounded in the Love Equation and truth seeking - on your hardware, under your control.</p>
+            <a href="mailto:contact@leq-dynamics.com" class="btn btn-sand">Start a Conversation</a>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="shared/components.js"></script>
+</body>
+</html>

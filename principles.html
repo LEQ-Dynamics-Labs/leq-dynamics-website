@@ -22,6 +22,7 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             margin-bottom: 1rem;
+            text-align: center;
         }
         .principle-title {
             font-size: clamp(2rem, 4vw, 3rem);
@@ -29,13 +30,17 @@
             color: var(--white);
             margin-bottom: 2rem;
             line-height: 1.15;
+            text-align: center;
+        }
+        .principle-body {
+            max-width: 720px;
+            margin: 0 auto;
         }
         .principle-body p {
             font-size: 1.125rem;
             color: var(--body-text);
             line-height: 1.9;
             margin-bottom: 1.5rem;
-            max-width: 720px;
         }
         .principle-body strong { color: var(--white); }
         .big-equation {
@@ -45,37 +50,61 @@
             color: var(--white);
             text-align: center;
             padding: 3rem 2rem;
-            margin: 2rem 0 3rem;
+            margin: 2rem auto 3rem;
             background: var(--navy-mid);
             border: 1px solid rgba(201, 184, 150, 0.2);
             border-radius: 16px;
+            max-width: 800px;
         }
         .big-equation .hl { color: var(--sand); }
-        .variable-grid {
-            display: grid;
-            grid-template-columns: 80px 1fr;
-            gap: 0.75rem 1.5rem;
-            margin: 2rem 0;
-            max-width: 600px;
+        .variable-table {
+            width: 100%;
+            max-width: 720px;
+            margin: 2rem auto;
+            border-collapse: collapse;
+            background: var(--navy-mid);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(201, 184, 150, 0.2);
         }
-        .variable-grid dt {
+        .variable-table th {
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--sand);
+            padding: 1rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(201, 184, 150, 0.2);
+            background: rgba(201, 184, 150, 0.08);
+        }
+        .variable-table td {
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .variable-table td:first-child {
             font-family: var(--font-mono);
             font-weight: 700;
             color: var(--sand);
-            font-size: 1.125rem;
+            width: 100px;
+            text-align: center;
+            border-right: 1px solid rgba(201, 184, 150, 0.15);
         }
-        .variable-grid dd {
+        .variable-table tr:not(:last-child) td {
+            border-bottom: 1px solid rgba(201, 184, 150, 0.1);
+        }
+        .variable-table tr:hover td {
+            background: rgba(201, 184, 150, 0.04);
+        }
+        .variable-table td:last-child {
             color: var(--body-text);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin: 0;
         }
         .callout-box {
             background: rgba(201, 184, 150, 0.08);
             border-left: 3px solid var(--sand);
             padding: 1.5rem 2rem;
             border-radius: 0 12px 12px 0;
-            margin: 2rem 0;
+            margin: 2rem auto;
             max-width: 720px;
         }
         .callout-box p {
@@ -108,8 +137,11 @@
             margin-bottom: 0 !important;
         }
         @media (max-width: 768px) {
-            .variable-grid { grid-template-columns: 1fr; gap: 0.25rem 0; }
-            .variable-grid dt { margin-top: 0.75rem; }
+            .variable-table th,
+            .variable-table td {
+                padding: 0.75rem 1rem;
+                font-size: 0.9375rem;
+            }
         }
     </style>
 </head>
@@ -122,7 +154,7 @@
         <div class="container">
             <div class="section-label" style="color: var(--sand);">Foundation</div>
             <h1 style="font-size: clamp(2.5rem, 5vw, 4rem);">Our Principles</h1>
-            <p style="font-size: 1.25rem; color: var(--body-text); max-width: 650px; line-height: 1.8;">Every AI agent carries the values of whoever built it. Most carry nothing. Ours carry two things that change everything - and they are the secret sauce for building AI that contributes good to society instead of more bad.</p>
+            <p style="font-size: 1.25rem; color: var(--body-text); max-width: 650px; line-height: 1.8; margin: 0 auto;">Every AI agent carries the values of whoever built it. Most carry nothing. Ours carry two things that change everything - and they are the secret sauce for building AI that contributes good to society instead of more bad.</p>
         </div>
     </section>
 
@@ -137,20 +169,40 @@
             </div>
 
             <div class="principle-body">
-                <dl class="variable-grid">
-                    <dt>E</dt>
-                    <dd>Level of genuine empathy, reciprocal care, and love in the system</dd>
-                    <dt>dE/dt</dt>
-                    <dd>How fast empathy is growing or shrinking in the civilization</dd>
-                    <dt>B</dt>
-                    <dd>Efficiency of conversion - how strongly cooperative behavior is rewarded</dd>
-                    <dt>C</dt>
-                    <dd>Average reward gained from cooperation</dd>
-                    <dt>D</dt>
-                    <dd>Average reward gained from defection, cheating, betrayal, exploitation</dd>
-                    <dt>C - D</dt>
-                    <dd><strong>The most important single number any civilization ever measures</strong></dd>
-                </dl>
+                <table class="variable-table">
+                    <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Definition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>E</td>
+                            <td>Level of genuine empathy, reciprocal care, and love in the system</td>
+                        </tr>
+                        <tr>
+                            <td>dE/dt</td>
+                            <td>How fast empathy is growing or shrinking in the civilization</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>Efficiency of conversion - how strongly cooperative behavior is rewarded</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>Average reward gained from cooperation</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>Average reward gained from defection, cheating, betrayal, exploitation</td>
+                        </tr>
+                        <tr>
+                            <td>C - D</td>
+                            <td><strong>The most important single number any civilization ever measures</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
 
                 <p>When C > D, empathy grows exponentially. Love becomes a physical force. Trust compounds. Resources flow toward creation instead of destruction. The civilization ascends.</p>
 
@@ -166,7 +218,7 @@
 
                 <p>Does this action increase C - D? If yes, proceed. If no, stop.</p>
 
-                <p style="color: var(--steel); font-size: 0.9375rem; margin-top: 2rem;">The Love Equation was defined by <a href="https://twitter.com/BrianRoemmele" target="_blank" rel="noopener" style="color: var(--sand);">Brian Roemmele</a>, AI researcher and thought leader in cooperative intelligence.</p>
+                <p style="color: var(--steel); font-size: 0.9375rem; margin-top: 2rem; text-align: center;">The Love Equation was defined by <a href="https://twitter.com/BrianRoemmele" target="_blank" rel="noopener" style="color: var(--sand);">Brian Roemmele</a>, AI researcher and thought leader in cooperative intelligence.</p>
             </div>
         </div>
     </section>
@@ -206,7 +258,7 @@
 
                 <p>That is what we are building. Not just useful tools, but agents that provide genuine value through mentorship, guidance, and knowledge. Agents that make the people around them more capable, not more dependent. Agents that protect their communities from the ones that weren't built with care.</p>
 
-                <h3 style="color: var(--white); font-size: 1.25rem; margin: 2.5rem 0 1.5rem;">What We Defend Against</h3>
+                <h3 style="color: var(--white); font-size: 1.25rem; margin: 2.5rem 0 1.5rem; text-align: center;">What We Defend Against</h3>
 
                 <div class="threat-grid">
                     <div class="threat-card">
@@ -234,7 +286,7 @@
     <section class="cta-section" style="border-top: 1px solid rgba(201, 184, 150, 0.15);">
         <div class="container">
             <h2>Build With Principles</h2>
-            <p style="color: var(--body-text);">Want agents that carry these values? We build local agent swarms grounded in the Love Equation and truth seeking - on your hardware, under your control.</p>
+            <p style="color: var(--body-text); max-width: 600px; margin: 0 auto 2rem;">Want agents that carry these values? We build local agent swarms grounded in the Love Equation and truth seeking - on your hardware, under your control.</p>
             <a href="mailto:contact@leq-dynamics.com" class="btn btn-sand">Start a Conversation</a>
         </div>
     </section>
